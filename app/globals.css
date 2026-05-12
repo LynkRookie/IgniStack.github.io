@@ -1,0 +1,232 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Light mode — mid-tone steel blue, richer than pure white */
+  --background: 213 22% 96%;
+  --foreground: 215 35% 10%;
+  --card: 213 22% 78%;
+  --card-foreground: 215 35% 10%;
+  --popover: 213 22% 78%;
+  --popover-foreground: 215 35% 10%;
+  --primary: 22 95% 52%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 213 20% 64%;
+  --secondary-foreground: 215 35% 10%;
+  --muted: 213 20% 66%;
+  --muted-foreground: 215 22% 30%;
+  --accent: 38 75% 48%;
+  --accent-foreground: 215 35% 10%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 213 18% 58%;
+  --input: 213 18% 58%;
+  --ring: 22 95% 52%;
+  --fire: 22 95% 52%;
+  --electric: 210 100% 50%;
+  --bronze: 36 62% 42%;
+  --chart-1: 22 95% 52%;
+  --chart-2: 210 100% 50%;
+  --chart-3: 36 62% 42%;
+  --chart-4: 0 75% 55%;
+  --chart-5: 270 60% 55%;
+  --radius: 0.375rem;
+  --sidebar: 213 22% 68%;
+  --sidebar-foreground: 215 35% 10%;
+  --sidebar-primary: 22 95% 52%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 213 20% 64%;
+  --sidebar-accent-foreground: 215 35% 10%;
+  --sidebar-border: 213 18% 58%;
+  --sidebar-ring: 22 95% 52%;
+}
+
+.dark {
+  /* Dark mode — sirve para los nav, logo y posiblemente las letras */
+  --fond-color:black;
+  --background: 218 28% 13%;
+  --foreground: 210 20% 92%;
+  --card: 218 28% 17%;
+  --card-foreground: 210 20% 92%;
+  --popover: 218 28% 17%;
+  --popover-foreground: 210 20% 92%;
+  --primary: 22 95% 55%;
+  --primary-foreground: 218 28% 10%;
+  --secondary: 218 25% 22%;
+  --secondary-foreground: 210 20% 92%;
+  --muted: 218 25% 22%;
+  --muted-foreground: 215 18% 55%;
+  --accent: 36 68% 50%;
+  --accent-foreground: 218 28% 10%;
+  --destructive: 0 63% 45%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 218 25% 24%;
+  --input: 218 25% 24%;
+  --ring: 22 95% 55%;
+  --fire: 22 95% 55%;
+  --electric: 210 100% 60%;
+  --bronze: 36 62% 52%;
+  --chart-1: 22 95% 55%;
+  --chart-2: 210 100% 60%;
+  --chart-3: 36 62% 52%;
+  --chart-4: 0 75% 55%;
+  --chart-5: 270 60% 55%;
+  --sidebar: 218 28% 11%;
+  --sidebar-foreground: 210 20% 92%;
+  --sidebar-primary: 22 95% 55%;
+  --sidebar-primary-foreground: 218 28% 10%;
+  --sidebar-accent: 218 25% 22%;
+  --sidebar-accent-foreground: 210 20% 92%;
+  --sidebar-border: 218 25% 24%;
+  --sidebar-ring: 22 95% 55%;
+}
+
+@theme inline {
+  --font-sans: 'Geist', 'Geist Fallback';
+  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --color-fire: hsl(var(--fire));
+  --color-electric: hsl(var(--electric));
+  --color-bronze: hsl(var(--bronze));
+  --color-chart-1: hsl(var(--chart-1));
+  --color-chart-2: hsl(var(--chart-2));
+  --color-chart-3: hsl(var(--chart-3));
+  --color-chart-4: hsl(var(--chart-4));
+  --color-chart-5: hsl(var(--chart-5));
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 4px);
+  --radius-xl: calc(var(--radius) + 8px);
+  --color-sidebar: hsl(var(--sidebar));
+  --color-sidebar-foreground: hsl(var(--sidebar-foreground));
+  --color-sidebar-primary: hsl(var(--sidebar-primary));
+  --color-sidebar-primary-foreground: hsl(var(--sidebar-primary-foreground));
+  --color-sidebar-accent: hsl(var(--sidebar-accent));
+  --color-sidebar-accent-foreground: hsl(var(--sidebar-accent-foreground));
+  --color-sidebar-border: hsl(var(--sidebar-border));
+  --color-sidebar-ring: hsl(var(--sidebar-ring));
+  --text-xs: 0.55rem;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+::-webkit-scrollbar-thumb {
+  background-color: hsl(var(--fire) / 0.4);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(var(--fire) / 0.7);
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+  animation: fadeIn 0.7s ease-out forwards;
+}
+
+/* Forge flicker animation for the fire accent */
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.75; }
+}
+.animate-flicker {
+  animation: flicker 3s ease-in-out infinite;
+}
+
+/* Gradient text — fire to electric */
+.gradient-text {
+  background: linear-gradient(135deg, hsl(var(--fire)) 0%, hsl(var(--electric)) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* HUD corner decorations */
+.hud-corner {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-color: hsl(var(--fire) / 0.5);
+  border-style: solid;
+}
+.hud-corner-tl { top: 0; left: 0; border-width: 2px 0 0 2px; }
+.hud-corner-tr { top: 0; right: 0; border-width: 2px 2px 0 0; }
+.hud-corner-bl { bottom: 0; left: 0; border-width: 0 0 2px 2px; }
+.hud-corner-br { bottom: 0; right: 0; border-width: 0 2px 2px 0; }
+
+/* Section divider — forge-style */
+.forge-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.forge-divider::before,
+.forge-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, hsl(var(--fire) / 0.4));
+}
+.forge-divider::after {
+  background: linear-gradient(to left, transparent, hsl(var(--fire) / 0.4));
+}
+
+/* Section heading accent bar */
+.section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: hsl(var(--fire));
+  padding: 3px 10px;
+  border: 1px solid hsl(var(--fire) / 0.35);
+  border-radius: 2px;
+  background: hsl(var(--fire) / 0.06);
+}

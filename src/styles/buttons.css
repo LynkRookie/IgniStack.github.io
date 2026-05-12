@@ -1,0 +1,26 @@
+/* Category filter button */
+.btn-filter {
+  padding: 0.625rem 1.5rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.btn-filter-active {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  box-shadow: 0 4px 12px hsla(var(--primary) / 0.3);
+}
+
+.btn-filter-inactive {
+  background-color: hsl(var(--card));
+  color: hsl(var(--muted-foreground));
+  border-color: hsl(var(--border));
+}
+
+.btn-filter-inactive:hover {
+  color: hsl(var(--foreground));
+  border-color: hsl(var(--primary) / 0.5);
+}

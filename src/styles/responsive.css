@@ -1,0 +1,49 @@
+/* Responsive helpers */
+@media (max-width: 640px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .grid-projects {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-certs {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .grid-projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1025px) {
+  .grid-projects {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Mobile nav */
+@media (max-width: 768px) {
+  .nav-desktop {
+    display: none;
+  }
+  .nav-mobile-btn {
+    display: flex;
+  }
+}
+
+@media (min-width: 769px) {
+  .nav-mobile-btn {
+    display: none;
+  }
+  .nav-mobile-menu {
+    display: none !important;
+  }
+}

@@ -1,0 +1,43 @@
+/* IgniStack — slate-blue palette matching logo (mirror of app/globals.css) */
+:root {
+  --background:          213 22% 72%;
+  --foreground:          215 35% 10%;
+  --card:                213 22% 78%;
+  --card-foreground:     215 35% 10%;
+  --primary:             22 95% 52%;
+  --primary-foreground:  0 0% 100%;
+  --secondary:           213 20% 64%;
+  --secondary-foreground:215 35% 10%;
+  --muted:               213 20% 66%;
+  --muted-foreground:    215 22% 30%;
+  --accent:              38 75% 48%;
+  --accent-foreground:   215 35% 10%;
+  --border:              213 18% 58%;
+  --input:               213 18% 58%;
+  --ring:                22 95% 52%;
+  --fire:                22 95% 52%;
+  --electric:            210 100% 50%;
+  --bronze:              36 62% 42%;
+  --radius:              0.375rem;
+}
+
+.dark {
+  --background:          218 28% 13%;
+  --foreground:          210 20% 92%;
+  --card:                218 28% 17%;
+  --card-foreground:     210 20% 92%;
+  --primary:             22 95% 55%;
+  --primary-foreground:  218 28% 10%;
+  --secondary:           218 25% 22%;
+  --secondary-foreground:210 20% 92%;
+  --muted:               218 25% 22%;
+  --muted-foreground:    215 18% 55%;
+  --accent:              36 68% 50%;
+  --accent-foreground:   218 28% 10%;
+  --border:              218 25% 24%;
+  --input:               218 25% 24%;
+  --ring:                22 95% 55%;
+  --fire:                22 95% 55%;
+  --electric:            210 100% 60%;
+  --bronze:              36 62% 52%;
+}
